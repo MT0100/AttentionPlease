@@ -3,8 +3,8 @@ This repository contains the code and notebooks related to the "Attention Please
 
 Project Structure
 
-web_service_attention_please.py: This is the main Python script that runs a FastAPI web service for performing sentiment analysis and named entity recognition on Turkish text. It integrates the Zemberek library for morphological analysis and uses Hugging Face Transformers for sentiment and NER tasks.
-
+web_service_attention_please.py: This is the main Python script that runs a FastAPI web service for performing sentiment analysis and named entity recognition on Turkish text. It integrates the Zemberek library for morphological analysis and uses Hugging Face Transformers for sentiment and NER tasks. We also pushed our models to huggingface. You can reach our sentiment model that we trained with our own dataset with model = AutoModelForSequenceClassification.from_pretrained("ikball/turkish-sentiment", from_tf=True);tokenizer = AutoTokenizer.from_pretrained("ikball/turkish-sentiment").
+You can reach our entity ner model that we trained with our own dataset with model = AutoModelForTokenClassification.from_pretrained("mext741/turkish-ner-company");tokenizer = AutoTokenizer.from_pretrained("mext741/turkish-ner-company").
 DATASET DESCRIPTIONS
 
 Balanced_Sample_Sentiment_Dataset was used to train the model initially.
